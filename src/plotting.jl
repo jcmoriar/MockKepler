@@ -269,6 +269,7 @@ function plot_all(chain, camp, kois; dir="/Users/johncmoriarty/AeroFS/Projects/K
 
     end
 
+    PyPlot.clf()
     PyPlot.fill_between(collect(0:7), minmult+(minmult.==0).*.1, maxmult, color=color_simulated, label="Simulated")
     PyPlot.plot(collect(0:7), actual_mult, color=color_koi, label="KOIs", marker="o", ms=10, ls="None")
     PyPlot.yscale("log")
